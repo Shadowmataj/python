@@ -5,30 +5,30 @@ from game_data import data
 keep_playing = True
 
 def choice_person():
+    """Return one option from the data file."""
     return random.choice(data)
 
 def higher_followers(a,b):
+    """Return the higher"""
     if a["follower_count"] > b["follower_count"]:
         return a
     else:
         return b
 
 def game():
+    """main game"""
     score = 0
     correct_answer = True
-    b_person = None
     a_person = None
+    b_person = None
     print(logo)
     while correct_answer:
-
 
         if score == 0:
             a_person = choice_person()
         b_person = choice_person()
         while a_person == b_person:
             b_person = choice_person()
-
-
 
         print(f"Compare A: {a_person["name"]}, {a_person["description"]}, from {a_person["country"]}")
         print(vs)
@@ -45,14 +45,14 @@ def game():
         print("\n" * 20)
         if answer == higher:
             score += 1
-            a_person = higher
+            a_person = b_person
             print(f"You're right! Current score: {score}")
         else:
             print(f"Sorry, that's wrong. Final score: {score}")
             correct_answer = not correct_answer
 
 while keep_playing:
-
+    #use the main function to begin the game.
     game()
 
     if input("Type 'y' to play again, 'n' to quit: ").lower() == "n":
