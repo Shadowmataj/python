@@ -65,12 +65,8 @@ def cup_of_coffe(r_list, coffee, mon, cofee_name):
         return [r_list, mon]
     elif total_order >= coffee["cost"]:
         change = total_order - coffee["cost"]
-        if change > mon:
-            print("Sorry there's no enough money for change. Money refunded.")
-            return [r_list, mon]
-        else:
-            total_order -= change
-            print(f"Making your coffee, ${round(change,2)} dollars in change.”")
+        total_order -= change
+        print(f"Making your coffee, ${round(change,2)} dollars in change.”")
 
     for item in coffee["ingredients"]:
         r_list[item] -= coffee["ingredients"][item]
