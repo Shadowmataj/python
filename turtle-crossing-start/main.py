@@ -30,11 +30,11 @@ while game_is_on:
     car_manager.move()
 
     for car in car_manager.cars:
-        car_left_limit = car.xcor() - 20
-        car_right_limit = car.xcor() + 20
+        car_left_limit = car.xcor() - 25
+        car_right_limit = car.xcor() + 25
 
-        car_bottom_position = car.ycor() - 15
-        car_top_position = car.ycor() + 1
+        car_bottom_position = car.ycor() - 20
+        car_top_position = car.ycor() + 20
 
         if car_left_limit <= turtle.xcor() <= car_right_limit and  car_bottom_position <= turtle.ycor() <= car_top_position:
             scoreboard.game_over()

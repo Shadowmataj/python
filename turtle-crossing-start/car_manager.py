@@ -14,7 +14,7 @@ class CarManager(Turtle):
 
 
     def create_a_new_car(self):
-        random_chance = random.randint(1,40)
+        random_chance = random.randint(1,6)
         if random_chance == 1:
             new_car = Turtle()
             new_car.shape("square")

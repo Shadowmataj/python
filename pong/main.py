@@ -29,7 +29,13 @@ def pong():
         sleep(ball.move_speed)
         ball.game()
         for paddle in paddles:
-            if ball.distance(paddle) < 50 and (ball.xcor() < -450 or ball.xcor() > 450):
+            paddle_left_limit = paddle.xcor() - 25
+            paddle_right_limit = paddle.xcor() + 25
+
+            paddle_bottom_position = paddle.ycor() - 50
+            paddle_top_position = paddle.ycor() + 50
+
+            if paddle_left_limit <= ball.xcor() <= paddle_right_limit and paddle_bottom_position <= ball.ycor() <= paddle_top_position:
                 ball.paddle_collision()
 
         if ball.ycor() >= MAX_TOP or ball.ycor() <= MAX_BOTTOM:
