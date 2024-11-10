@@ -22,10 +22,7 @@ while len(named_states) < total_states:
     answer_state = screen.textinput(title=f"{len(named_states)}/{total_states} States Correct", prompt="What's another state?").title()
 
     if answer_state == "Exit":
-        for state in all_states:
-            if state not in named_states:
-                missed_states.append(state)
-
+        missed_states = [state for state in all_states if state not in named_states]
         states_to_learn = pandas.DataFrame(missed_states, columns=["state"])
         states_to_learn.to_csv("states_to_learn.csv")
         break
