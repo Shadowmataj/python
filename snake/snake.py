@@ -50,3 +50,10 @@ class Snake:
             new_y = self.segments[part_number - 1].ycor()
             self.segments[part_number].goto(new_x, new_y)
         self.segments[0].forward(20)
+
+    def reset(self):
+        for segment in self.segments:
+            segment.goto(1000, 1000)
+        self.segments.clear()
+        self.create_snake()
+        self.head = self.segments[0]
