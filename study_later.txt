@@ -1,3 +1,4 @@
 cosas para estudiar después:
 
-panda docs
+
+pandas docs
