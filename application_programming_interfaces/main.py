@@ -7,8 +7,8 @@ import requests
 
 MY_LAT = 19.432608
 MY_LON = -99.133209
-MY_EMAIL = "christianmataj1@gmail.com"
-MY_PASSWORD = "ytrdilgxckajmouv"
+MY_EMAIL = "email"
+MY_PASSWORD = "email_password"
 
 def email_alert():
     with smtplib.SMTP("smtp.gmail.com") as connection:

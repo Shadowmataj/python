@@ -5,8 +5,8 @@ import random
 
 APP_PASSWORD = "ytrdilgxckajmouv"
 
-my_email = "christianmataj1@gmail.com"
-test_email = "mata_juarez@hotmail.com"
+my_email = "email"
+test_email = "email"
 
 def send_email(quote):
     with smtplib.SMTP("smtp.gmail.com") as connection:

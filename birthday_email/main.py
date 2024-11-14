@@ -4,8 +4,8 @@ import pandas
 import random
 import smtplib
 
-MY_EMAIL = "christianmataj1@gmail.com"
-APP_PASSWORD = "ytrdilgxckajmouv"
+MY_EMAIL = "email"
+APP_PASSWORD = "email_password"
 today_birthdays = []
 
 def send_email(**kwargs):
