@@ -2,3 +2,4 @@ cosas para estudiar después:
 
 
 pandas docs
+Beautiful Soup docs
