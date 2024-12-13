@@ -5,3 +5,4 @@ config.py
 .env.devel
 .cache-ffsw852wpjxd4b6ab693vw4j3
 /img
+*.db
